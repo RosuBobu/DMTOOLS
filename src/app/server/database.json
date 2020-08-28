@@ -1,0 +1,32 @@
+{
+  "players": [
+    {
+      "owner": "TOMA",
+      "campain": "Call of Cthulhu",
+      "name": "Inspecteur Pipon",
+      "class": "Shooter",
+      "id": 1
+    },
+    {
+      "owner": "Jean-Jacquot",
+      "campain": "Call of Cthulhu",
+      "name": "James Noob ",
+      "class": "Shooter",
+      "id": 2
+    },
+    {
+      "name": "Mibz",
+      "owner": "TIBO",
+      "campain": "My Little Poney Nuclear Edition",
+      "class": "Bard",
+      "id": 3
+    },
+    {
+      "name": "ALTHEAS",
+      "owner": "adrienne",
+      "campain": "My Little Poney Nuclear Edition",
+      "class": "Wizard",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+<div class="container m-auto p-2 col-6">
+  <form #validationForm="ngForm" (ngSubmit)="addPlayer()">
+    <div class="form-group">
+      <label for="name">NAME</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        class="form-control"
+        #playerInput="ngModel"
+        [(ngModel)]="playerForm.name"
+        required
+      >
+      <div
+        [hidden]="playerInput.valid"
+        class="alert alert-danger">
+        please enter a name !
+      </div>
+    </div>
+
+    <!-- Character can be NPC => I DO NOT check owner -->
+    <div class="form-group">
+      <label for="owner">OWNER</label>
+      <input id="owner" name="owner" type="text" class="form-control" [(ngModel)]="playerForm.owner" >
+    </div>
+
+    <div class="form-group">
+      <label>CHARACTER'S CAMPAIN</label><br>
+      <ng-container *ngFor="let campain of campains" >
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="campain"
+            id="radio-{{campain}}"
+            value="{{campain}}"
+            [(ngModel)]="playerForm.campain"
+            required
+          >
+          <label class="form-check-label" for="campain">{{campain}}</label>
+        </div>
+      </ng-container>
+      <div
+        [hidden]="validationForm.controls.campain?.valid"
+        class="alert alert-danger"
+      >
+        please select a campain !
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>CHARACTER'S CLASS</label><br>
+      <select name="class" class="form-control" [(ngModel)]="playerForm.class">
+        <option></option>
+        <option value="{{class}}" *ngFor="let class of classes">{{class}}</option>
+      </select>
+    </div>
+    <input
+      type="submit"
+      class="btn btn-success"
+      value="SUBMIT CHARACTER !!!"
+      [disabled]="!validationForm.valid"
+    >
+  </form>
+</div>

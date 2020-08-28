@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dmtools-1b806": {
+      "hosting": {
+        "DMTOOLS": [
+          "dmtools-1b806"
+        ]
+      }
+    }
+  }
+}
