@@ -27,6 +27,13 @@
       "campain": "My Little Poney Nuclear Edition",
       "class": "Wizard",
       "id": 4
+    },
+    {
+      "name": "poussinouchou",
+      "owner": "adrienne",
+      "campain": "My Little Poney Nuclear Edition",
+      "class": "Knight",
+      "id": 5
     }
   ]
 }
